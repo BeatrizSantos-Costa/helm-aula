@@ -41,9 +41,3 @@ questions:
     type: int
     label: Informa maxReplicas
     group: "HPA"
-- variable: service.type
-  default: "true"
-  description: "Service Type"
-  label: use service type
-  type: string
-  group: "Service"
