@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
     name: {{ .Values.configmap.name | default {  include "app-beah.fullname" .}}
     labels:
-        {{- include "app-beah.fullname" . | nindent 8 }}
+        {{- include "app-beah.fullname" . | nindent 4 }}
 {{- with .Values.configMap.data }}
 data:
     {{- toYaml . | nindent 2 }}
