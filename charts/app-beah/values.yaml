@@ -80,3 +80,11 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+configMap:
+  enabled: true
+  name: ""
+  data:
+    var1: "01"
+    var2: "02"
+    var3: "03"
