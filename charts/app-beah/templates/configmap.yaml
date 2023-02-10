@@ -1,10 +1,10 @@
-{{- if .Values.configmap.enabled }}
+{{- if .Values.configMap.enabled -}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
-    name: {{ .Values.configmap.name | default {  include "app-beah.fullname" . } }}
+    name: {{ .Values.configMap.name | default ( include "app-beah.fullname" . ) }}
     labels:
-        {{- include "app-beah.fullname" . | nindent 4 }}
+        {{- include "app-beah.labels" . | nindent 8 }}
 {{- with .Values.configMap.data }}
 data:
     {{- toYaml . | nindent 4 }}
